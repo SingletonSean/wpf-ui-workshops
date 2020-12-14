@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using UIWorkshops.Demos.Windows;
 
 namespace UIWorkshops.Demos
 {
@@ -6,7 +7,7 @@ namespace UIWorkshops.Demos
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            MainWindow = new Window();
+            MainWindow = new HighlightTextBlockDemoWindow();
             MainWindow.Show();
 
             base.OnStartup(e);
