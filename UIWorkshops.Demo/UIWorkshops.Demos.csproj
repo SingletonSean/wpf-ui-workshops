@@ -6,4 +6,8 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HighlightTextBlockControl\HighlightTextBlockControl.csproj" />
+  </ItemGroup>
+
 </Project>
