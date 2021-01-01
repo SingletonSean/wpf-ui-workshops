@@ -1,0 +1,125 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:converters="clr-namespace:HoldSubmitButtonControl.Converters"
+    xmlns:local="clr-namespace:HoldSubmitButtonControl">
+    <Style TargetType="{x:Type local:HoldSubmitButton}">
+        <Style.Resources>
+            <converters:MultiplyConverter x:Key="MultiplyConverter" />
+            <converters:DurationSecondsSubtractionConverter x:Key="DurationSecondsSubtractionConverter" />
+        </Style.Resources>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:HoldSubmitButton}">
+                    <Grid>
+                        <Ellipse
+                            x:Name="normalEllipse"
+                            Width="{TemplateBinding Width,
+                                                    Converter={StaticResource MultiplyConverter},
+                                                    ConverterParameter=0.5}"
+                            Height="{TemplateBinding Height,
+                                                     Converter={StaticResource MultiplyConverter},
+                                                     ConverterParameter=0.5}"
+                            Panel.ZIndex="2"
+                            Fill="#451400" />
+
+                        <Ellipse
+                            x:Name="bgEllipse"
+                            Width="0"
+                            Height="0"
+                            Panel.ZIndex="1"
+                            Fill="#b3831e" />
+
+                        <Ellipse
+                            x:Name="holdEllipse"
+                            Width="0"
+                            Height="0"
+                            Panel.ZIndex="3"
+                            Fill="#451400" />
+
+                        <TextBlock
+                            Width="{TemplateBinding Width,
+                                                    Converter={StaticResource MultiplyConverter},
+                                                    ConverterParameter=0.4}"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Panel.ZIndex="4"
+                            FontSize="16"
+                            Foreground="White"
+                            Text="{TemplateBinding Content}"
+                            TextAlignment="Center"
+                            TextWrapping="Wrap" />
+                        <Grid.Triggers>
+                            <EventTrigger RoutedEvent="MouseLeftButtonDown">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="bgEllipse"
+                                            Storyboard.TargetProperty="Width"
+                                            From="{Binding Width, ElementName=normalEllipse}"
+                                            To="{Binding Width, RelativeSource={RelativeSource TemplatedParent}}"
+                                            Duration="0:0:0.25" />
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="bgEllipse"
+                                            Storyboard.TargetProperty="Height"
+                                            From="{Binding Height, ElementName=normalEllipse}"
+                                            To="{Binding Height, RelativeSource={RelativeSource TemplatedParent}}"
+                                            Duration="0:0:0.25" />
+                                        <DoubleAnimation
+                                            AccelerationRatio="0.6"
+                                            BeginTime="0:0:0.4"
+                                            Storyboard.TargetName="holdEllipse"
+                                            Storyboard.TargetProperty="Width"
+                                            From="{Binding Width, ElementName=normalEllipse}"
+                                            To="{Binding Width, RelativeSource={RelativeSource TemplatedParent}}"
+                                            Duration="{Binding HoldDuration, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource DurationSecondsSubtractionConverter}, ConverterParameter=0.4}" />
+                                        <DoubleAnimation
+                                            AccelerationRatio="0.6"
+                                            BeginTime="0:0:0.4"
+                                            Storyboard.TargetName="holdEllipse"
+                                            Storyboard.TargetProperty="Height"
+                                            From="{Binding Height, ElementName=normalEllipse}"
+                                            To="{Binding Height, RelativeSource={RelativeSource TemplatedParent}}"
+                                            Duration="{Binding HoldDuration, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource DurationSecondsSubtractionConverter}, ConverterParameter=0.4}" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Grid.Triggers>
+                    </Grid>
+                    <ControlTemplate.Resources>
+                        <Storyboard x:Key="RestoreStoryboard">
+                            <DoubleAnimation
+                                Storyboard.TargetName="bgEllipse"
+                                Storyboard.TargetProperty="Width"
+                                To="0"
+                                Duration="0:0:0.25" />
+                            <DoubleAnimation
+                                Storyboard.TargetName="bgEllipse"
+                                Storyboard.TargetProperty="Height"
+                                To="0"
+                                Duration="0:0:0.25" />
+                            <DoubleAnimation
+                                Storyboard.TargetName="holdEllipse"
+                                Storyboard.TargetProperty="Width"
+                                To="0"
+                                Duration="0:0:0.25" />
+                            <DoubleAnimation
+                                Storyboard.TargetName="holdEllipse"
+                                Storyboard.TargetProperty="Height"
+                                To="0"
+                                Duration="0:0:0.25" />
+                        </Storyboard>
+                    </ControlTemplate.Resources>
+                    <ControlTemplate.Triggers>
+                        <EventTrigger RoutedEvent="HoldCompleted">
+                            <BeginStoryboard Storyboard="{StaticResource RestoreStoryboard}" />
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="HoldCancelled">
+                            <BeginStoryboard Storyboard="{StaticResource RestoreStoryboard}" />
+                        </EventTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

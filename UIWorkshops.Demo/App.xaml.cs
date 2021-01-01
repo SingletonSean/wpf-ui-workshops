@@ -7,7 +7,7 @@ namespace UIWorkshops.Demos
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            MainWindow = new HighlightTextBlockDemoWindow();
+            MainWindow = new HoldSubmitButtonDemoWindow();
             MainWindow.Show();
 
             base.OnStartup(e);

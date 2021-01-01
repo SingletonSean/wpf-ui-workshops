@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UIWorkshops.Demos", "UIWorkshops.Demo\UIWorkshops.Demos.csproj", "{89CA86C9-8117-4934-A660-BA46D4227428}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HighlightTextBlockControl", "HighlightTextBlockControl\HighlightTextBlockControl.csproj", "{C147DADD-8B08-46ED-8A0C-5E0DF282CBD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HighlightTextBlockControl", "HighlightTextBlockControl\HighlightTextBlockControl.csproj", "{C147DADD-8B08-46ED-8A0C-5E0DF282CBD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoldSubmitButtonControl", "HoldSubmitButtonControl\HoldSubmitButtonControl.csproj", "{2E852E49-CA74-4B32-8394-BF79D7F683C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{C147DADD-8B08-46ED-8A0C-5E0DF282CBD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C147DADD-8B08-46ED-8A0C-5E0DF282CBD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C147DADD-8B08-46ED-8A0C-5E0DF282CBD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E852E49-CA74-4B32-8394-BF79D7F683C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E852E49-CA74-4B32-8394-BF79D7F683C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E852E49-CA74-4B32-8394-BF79D7F683C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E852E49-CA74-4B32-8394-BF79D7F683C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

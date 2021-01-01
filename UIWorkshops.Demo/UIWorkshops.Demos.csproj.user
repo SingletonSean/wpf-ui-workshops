@@ -7,7 +7,15 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Windows\HoldSubmitButtonDemoWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="Windows\HighlightTextBlockDemoWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\HoldSubmitButtonDemoWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
