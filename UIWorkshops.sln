@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UIWorkshops.Demos", "UIWork
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HighlightTextBlockControl", "HighlightTextBlockControl\HighlightTextBlockControl.csproj", "{C147DADD-8B08-46ED-8A0C-5E0DF282CBD7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoldSubmitButtonControl", "HoldSubmitButtonControl\HoldSubmitButtonControl.csproj", "{2E852E49-CA74-4B32-8394-BF79D7F683C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HoldSubmitButtonControl", "HoldSubmitButtonControl\HoldSubmitButtonControl.csproj", "{2E852E49-CA74-4B32-8394-BF79D7F683C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadingSpinnerControl", "LoadingSpinnerControl\LoadingSpinnerControl.csproj", "{4953D402-A7E2-4613-9F17-61E624E276ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{2E852E49-CA74-4B32-8394-BF79D7F683C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E852E49-CA74-4B32-8394-BF79D7F683C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E852E49-CA74-4B32-8394-BF79D7F683C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4953D402-A7E2-4613-9F17-61E624E276ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4953D402-A7E2-4613-9F17-61E624E276ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4953D402-A7E2-4613-9F17-61E624E276ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4953D402-A7E2-4613-9F17-61E624E276ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

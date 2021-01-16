@@ -7,7 +7,7 @@ namespace UIWorkshops.Demos
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            MainWindow = new HoldSubmitButtonDemoWindow();
+            MainWindow = new LoadingSpinnerDemoWindow();
             MainWindow.Show();
 
             base.OnStartup(e);

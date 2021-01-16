@@ -9,6 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\HighlightTextBlockControl\HighlightTextBlockControl.csproj" />
     <ProjectReference Include="..\HoldSubmitButtonControl\HoldSubmitButtonControl.csproj" />
+    <ProjectReference Include="..\LoadingSpinnerControl\LoadingSpinnerControl.csproj" />
   </ItemGroup>
 
 </Project>
