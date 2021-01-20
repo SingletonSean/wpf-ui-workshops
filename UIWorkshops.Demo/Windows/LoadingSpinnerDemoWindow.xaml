@@ -16,16 +16,20 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <CheckBox Grid.Row="0" Margin="10"
+        <CheckBox
             x:Name="cbIsLoading"
+            Grid.Row="0"
+            Margin="10"
             HorizontalAlignment="Center"
             Content="Is Loading" />
 
-        <custom:LoadingSpinner Grid.Row="1" Margin="10"
+        <custom:LoadingSpinner
+            Grid.Row="1"
+            Margin="10"
             Cap="Triangle"
-            Diameter="100"
+            Diameter="250"
             IsLoading="{Binding IsChecked, ElementName=cbIsLoading}"
-            Thickness="5"
-            Color="Red" />
+            Thickness="1"
+            Color="Black" />
     </Grid>
 </Window>

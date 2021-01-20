@@ -15,7 +15,7 @@ namespace LoadingSpinnerControl.Converters
                 !double.TryParse(values[0].ToString(), out double diameter) ||
                 !double.TryParse(values[1].ToString(), out double thickness))
             {
-                return 0;
+                return new DoubleCollection(new[] { 0.0 });
             }
 
             double circumference = Math.PI * diameter;

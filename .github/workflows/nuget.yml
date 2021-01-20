@@ -1,0 +1,41 @@
+name: "Deploy Loading Spinner to NuGet"
+
+on:
+  push:
+    branches:
+    - 'release/loading-spinner'
+
+env:
+  BUILD_CONFIGURATION: Release
+  PACKAGE_OUTPUT_DIRECTORY: ${{ github.workspace }}\output
+  NUGET_SOURCE_URL: "https://api.nuget.org/v3/index.json"
+  PACK_OPTIONS: "--no-restore --no-build --include-symbols --include-source"
+
+jobs:
+  deploy:
+    runs-on: windows-latest
+    steps:
+      # Setup
+      - uses: actions/checkout@v2
+
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: "3.1.x"
+
+      # Fix annoying packages not being found
+      - name: Clean
+        run: dotnet clean -c ${{ env.BUILD_CONFIGURATION }} && dotnet nuget locals all --clear
+
+      # .NET
+      - name: Restore .NET packages
+        run: dotnet restore
+
+      - name: Build .NET projects
+        run: dotnet build --no-restore -c ${{ env.BUILD_CONFIGURATION }}
+
+      - name: "Pack Loading Spinner Control project"
+        run: dotnet pack LoadingSpinnerControl -c ${{ env.BUILD_CONFIGURATION }} --output ${{ env.PACKAGE_OUTPUT_DIRECTORY }} ${{ env.PACK_OPTIONS }}
+
+      - name: "Push packages"
+        run: dotnet nuget push ${{ env.PACKAGE_OUTPUT_DIRECTORY }}\*.nupkg -k ${{ secrets.NUGET_AUTH_TOKEN }} -s ${{ env.NUGET_SOURCE_URL }}
