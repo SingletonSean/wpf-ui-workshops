@@ -21,5 +21,8 @@
     <Page Update="Windows\LoadingSpinnerDemoWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Windows\ModalDemoWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
 </Project>

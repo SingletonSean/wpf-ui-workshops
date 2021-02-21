@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HighlightTextBlockControl",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HoldSubmitButtonControl", "HoldSubmitButtonControl\HoldSubmitButtonControl.csproj", "{2E852E49-CA74-4B32-8394-BF79D7F683C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadingSpinnerControl", "LoadingSpinnerControl\LoadingSpinnerControl.csproj", "{4953D402-A7E2-4613-9F17-61E624E276ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoadingSpinnerControl", "LoadingSpinnerControl\LoadingSpinnerControl.csproj", "{4953D402-A7E2-4613-9F17-61E624E276ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModalControl", "ModalControl\ModalControl.csproj", "{259FF005-EA2C-412C-91F8-E4614E64AAF3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{4953D402-A7E2-4613-9F17-61E624E276ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4953D402-A7E2-4613-9F17-61E624E276ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4953D402-A7E2-4613-9F17-61E624E276ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{259FF005-EA2C-412C-91F8-E4614E64AAF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{259FF005-EA2C-412C-91F8-E4614E64AAF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{259FF005-EA2C-412C-91F8-E4614E64AAF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{259FF005-EA2C-412C-91F8-E4614E64AAF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
