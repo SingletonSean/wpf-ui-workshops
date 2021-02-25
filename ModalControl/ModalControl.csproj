@@ -5,4 +5,17 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <PackageId>SimpleModal.WPF</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>SingletonSean</Authors>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <RepositoryUrl>https://github.com/SingletonSean/wpf-ui-workshops</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/SingletonSean/wpf-ui-workshops</PackageProjectUrl>
+    <PackageTags>wpf custom modal popup control</PackageTags>
+    <Description>
+      A custom, easy to use modal control for WPF applications.
+    </Description>
+  </PropertyGroup>
+
 </Project>
