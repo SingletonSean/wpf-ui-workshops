@@ -12,6 +12,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Windows\HamburgerMenuDemoWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Windows\HighlightTextBlockDemoWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
