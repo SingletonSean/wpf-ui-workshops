@@ -75,7 +75,7 @@
                                 <BeginStoryboard>
                                     <Storyboard>
                                         <ColorAnimation
-                                            Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"
+                                            Storyboard.TargetProperty="Background.(SolidColorBrush.Color)"
                                             To="#dbdbdb"
                                             Duration="0:0:0.1" />
                                     </Storyboard>

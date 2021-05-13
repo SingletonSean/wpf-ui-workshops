@@ -7,11 +7,17 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Windows\DropdownMenuDemoWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Windows\HoldSubmitButtonDemoWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Windows\DropdownMenuDemoWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Windows\HamburgerMenuDemoWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
