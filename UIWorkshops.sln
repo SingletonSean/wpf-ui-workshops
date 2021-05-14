@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoadingSpinnerControl", "Lo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModalControl", "ModalControl\ModalControl.csproj", "{259FF005-EA2C-412C-91F8-E4614E64AAF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HamburgerMenuControl", "HamburgerMenuControl\HamburgerMenuControl.csproj", "{A9D3AF2E-0D73-4A01-A3F3-EA8C59EC56E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HamburgerMenuControl", "HamburgerMenuControl\HamburgerMenuControl.csproj", "{A9D3AF2E-0D73-4A01-A3F3-EA8C59EC56E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DropdownMenuControl", "DropdownMenuControl\DropdownMenuControl.csproj", "{5A570EBE-509D-4895-8FA6-9800846A13C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{A9D3AF2E-0D73-4A01-A3F3-EA8C59EC56E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9D3AF2E-0D73-4A01-A3F3-EA8C59EC56E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9D3AF2E-0D73-4A01-A3F3-EA8C59EC56E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A570EBE-509D-4895-8FA6-9800846A13C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A570EBE-509D-4895-8FA6-9800846A13C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A570EBE-509D-4895-8FA6-9800846A13C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A570EBE-509D-4895-8FA6-9800846A13C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
