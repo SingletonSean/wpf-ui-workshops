@@ -13,6 +13,7 @@
     <ProjectReference Include="..\HoldSubmitButtonControl\HoldSubmitButtonControl.csproj" />
     <ProjectReference Include="..\LoadingSpinnerControl\LoadingSpinnerControl.csproj" />
     <ProjectReference Include="..\ModalControl\ModalControl.csproj" />
+    <ProjectReference Include="..\PlaceholderTextBoxControl\PlaceholderTextBoxControl.csproj" />
   </ItemGroup>
 
 </Project>

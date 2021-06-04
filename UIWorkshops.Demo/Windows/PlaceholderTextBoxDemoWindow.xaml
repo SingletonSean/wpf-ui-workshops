@@ -1,0 +1,21 @@
+﻿<Window
+    x:Class="UIWorkshops.Demos.Windows.PlaceholderTextBoxDemoWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:custom="clr-namespace:PlaceholderTextBoxControl;assembly=PlaceholderTextBoxControl"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:UIWorkshops.Demos.Windows"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="PlaceholderTextBoxDemoWindow"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+    <Grid>
+        <custom:PlaceholderTextBox
+            MaxWidth="300"
+            Padding="8 2"
+            VerticalAlignment="Center"
+            FontSize="18"
+            Placeholder="Search" />
+    </Grid>
+</Window>

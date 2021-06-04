@@ -7,7 +7,7 @@ namespace UIWorkshops.Demos
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            MainWindow = new DropdownMenuDemoWindow();
+            MainWindow = new PlaceholderTextBoxDemoWindow();
             MainWindow.Show();
 
             base.OnStartup(e);
