@@ -22,11 +22,11 @@
             Text="People" />
 
         <ListView
-            x:Name="lvNames"
             Grid.Row="1"
             Margin="0 20 0 0"
             VerticalAlignment="Top"
-            BorderBrush="LightGray">
+            BorderBrush="LightGray"
+            ItemsSource="{Binding PeopleViewModels}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Border Padding="10">
@@ -40,7 +40,7 @@
                             <TextBlock
                                 Grid.Column="0"
                                 FontSize="18"
-                                Text="{Binding}" />
+                                Text="{Binding Name}" />
 
                             <custom:DropdownMenu Grid.Column="1">
                                 <custom:DropdownMenu.Resources>
@@ -87,15 +87,19 @@
                                         </Style.Triggers>
                                     </Style>
                                 </custom:DropdownMenu.Resources>
-                                <Border
-                                    Background="White"
-                                    BorderBrush="LightGray"
-                                    BorderThickness="1">
-                                    <StackPanel>
-                                        <Button Click="OnEditClick" Content="Edit" />
-                                        <Button Click="OnDeleteClick" Content="Delete" />
-                                    </StackPanel>
-                                </Border>
+                                <ListView ItemsSource="{Binding PeopleActionViewModels}">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <Border
+                                                Background="White"
+                                                BorderBrush="LightGray"
+                                                BorderThickness="1">
+                                                <Button Content="{Binding Title}" />
+                                            </Border>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+
                             </custom:DropdownMenu>
                         </Grid>
                     </Border>

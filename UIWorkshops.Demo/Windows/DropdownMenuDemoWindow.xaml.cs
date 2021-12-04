@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Windows;
 
 namespace UIWorkshops.Demos.Windows
@@ -8,26 +9,37 @@ namespace UIWorkshops.Demos.Windows
     /// </summary>
     public partial class DropdownMenuDemoWindow : Window
     {
+        public ObservableCollection<PeopleViewModel> PeopleViewModels { get; }
+
         public DropdownMenuDemoWindow()
         {
             InitializeComponent();
 
-            lvNames.ItemsSource = new List<string>()
+            DataContext = this;
+            PeopleViewModels = new ObservableCollection<PeopleViewModel>()
             {
-                "Joe",
-                "Sean",
-                "Mary"
+                new PeopleViewModel()
+                {
+                     Name = "Freelancer RG",
+                     PeopleActionViewModels = new ObservableCollection<PeopleActionViewModel>()
+                     {
+                         new PeopleActionViewModel() { Title = "Add" },
+                         new PeopleActionViewModel() { Title = "Edit" },
+                         new PeopleActionViewModel() { Title = "Delete" }
+                     }
+                }
             };
         }
+    }
 
-        private void OnEditClick(object sender, RoutedEventArgs e)
-        {
+    public class PeopleViewModel
+    {
+        public string Name { get; set; }
+        public ObservableCollection<PeopleActionViewModel> PeopleActionViewModels { get; set; }
+    }
 
-        }
-
-        private void OnDeleteClick(object sender, RoutedEventArgs e)
-        {
-
-        }
+    public class PeopleActionViewModel
+    {
+        public string Title { get; set; }
     }
 }
