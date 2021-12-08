@@ -7,7 +7,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:DropdownMenu}">
                     <Grid>
-                        <CheckBox x:Name="cbTripleDots" IsChecked="{Binding IsOpen, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}">
+                        <CheckBox x:Name="PART_Toggle" IsChecked="{Binding IsOpen, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}">
                             <CheckBox.Template>
                                 <ControlTemplate TargetType="CheckBox">
                                     <Grid Background="Transparent">
@@ -23,10 +23,11 @@
                         </CheckBox>
 
                         <Popup
+                            x:Name="PART_Popup"
                             AllowsTransparency="True"
                             IsOpen="{TemplateBinding IsOpen}"
                             Placement="Bottom"
-                            PlacementTarget="{Binding ElementName=cbTripleDots}"
+                            PlacementTarget="{Binding ElementName=PART_Toggle}"
                             StaysOpen="False">
                             <ContentControl Content="{TemplateBinding Content}" />
                         </Popup>
