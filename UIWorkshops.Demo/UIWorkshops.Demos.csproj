@@ -12,6 +12,7 @@
     <ProjectReference Include="..\HighlightTextBlockControl\HighlightTextBlockControl.csproj" />
     <ProjectReference Include="..\HoldSubmitButtonControl\HoldSubmitButtonControl.csproj" />
     <ProjectReference Include="..\LoadingSpinnerControl\LoadingSpinnerControl.csproj" />
+    <ProjectReference Include="..\PlaceholderTextBox\PlaceholderTextBox.csproj" />
     <ProjectReference Include="..\ModalControl\ModalControl.csproj" />
   </ItemGroup>
 
